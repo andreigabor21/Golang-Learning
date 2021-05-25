@@ -52,7 +52,7 @@ func (service *bookService) Delete(b entity.Book) {
 	service.bookRepository.DeleteBook(b)
 }
 
-func (service *bookService) All() []entity.Book {
+func (service *bookService) All() []entity.Book { //TODO
 	return service.bookRepository.AllBook()
 }
 

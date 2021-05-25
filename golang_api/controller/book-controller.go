@@ -32,7 +32,7 @@ func NewBookController(bookService service.BookService, jwtService service.JWTSe
 	}
 }
 
-func (c *bookController) All(context *gin.Context) {
+func (c *bookController) All(context *gin.Context) { //TODO
 	var books []entity.Book = c.bookService.All()
 	res := helper.BuildResponse(true, "OK", books)
 	context.JSON(http.StatusOK, res)

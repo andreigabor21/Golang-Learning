@@ -39,7 +39,7 @@ func (db *bookConnection) DeleteBook(b entity.Book) {
 	db.connection.Delete(&b)
 }
 
-func (db *bookConnection) AllBook() []entity.Book {
+func (db *bookConnection) AllBook() []entity.Book { //TODO
 	var books []entity.Book
 	db.connection.Preload("User").Find(&books)
 	return books
